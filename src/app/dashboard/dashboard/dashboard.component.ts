@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import L, { tileLayer, latLng, circle, polygon, marker, icon } from 'leaflet';
-import { MapService } from './map.service';
 import { MatDialog } from '@angular/material';
-import { MapPopupComponent } from '../map-popup/map-popup.component';
+import L, { latLng, marker, tileLayer } from 'leaflet';
+import { MapService } from './map.service';
 
 @Component({
   selector: 'vex-dashboard',
@@ -28,8 +27,9 @@ export class DashboardComponent implements OnInit {
           iconAnchor: new L.Point(25, 50),
           iconUrl: '/assets/img/icons/biohazard-512.png'
         })
+      }).bindPopup('<div> Atlanta | Virus growth </div> <div> <a class="button" href="/analyze">Analyze</a> </div>', {
+        minWidth: 250,
       })
-        .on('click', this.showPopup.bind(this))
     ],
     zoom: 5,
     center: latLng(46.879966, -121.726909)
@@ -41,6 +41,7 @@ export class DashboardComponent implements OnInit {
   constructor(private mapService: MapService, private dialog: MatDialog) { }
 
   ngOnInit() {
+
   }
 
   mapReady(map: L.Map) {
@@ -70,11 +71,4 @@ export class DashboardComponent implements OnInit {
       fillOpacity: 0.7
     };
   }
-
-  showPopup(): void {
-    const infoDialogRef = this.dialog.open(MapPopupComponent, {
-      width: '250px',
-    });
-  }
-
 }

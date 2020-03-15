@@ -39,6 +39,7 @@
     "highlight.js": "^9.15.8",
     "leaflet": "^1.6.0",
     "luxon": "^1.16.1",
+    "ng-apexcharts": "^1.2.1",
     "ngx-quill": "^7.3.6",
     "ngx-showdown": "^5.0.0",
     "ngx-take-until-destroy": "^5.4.0",

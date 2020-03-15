@@ -1,3 +1,51 @@
-<div>
-    test
+<div class="toolbar pl-4 pt-4">
+    <button mat-button type="button" [routerLink]="['/dashboard']">
+        <mat-icon [icIcon]="icArrowBack"></mat-icon>
+        Back to dashboard
+    </button>
+    <div class="right-button">
+        <button class="mr-2" mat-raised-button type="button">
+            <mat-icon [icIcon]="icDownload"></mat-icon>
+            Download
+        </button>
+        <button class="ml-2" mat-raised-button type="button">
+            <mat-icon [icIcon]="icEmail"></mat-icon>
+            Email
+        </button>
+    </div>
+</div>
+<div class="p-gutter" gdColumns="1fr 1fr 1fr 1fr" gdColumns.lt-md="1fr 1fr" gdColumns.lt-sm="1fr" gdGap="16px"
+    vexContainer>
+    <vex-widget-quick-value-center [change]="25" [icon]="icErrorOutline" [color]="theme.colors.orange"
+        gdColumn.lt-sm="1" label="Confirmed" value="64"></vex-widget-quick-value-center>
+    <vex-widget-quick-value-center [change]="0" [icon]="icHighlightOff" [color]="theme.colors['deep-orange']"
+        gdColumn.lt-sm="1" label="Deaths" value="1"></vex-widget-quick-value-center>
+    <vex-widget-quick-value-center [change]="0" [icon]="icDone" [color]="theme.colors.green" gdColumn.lt-sm="1"
+        label="Recovered" value="0">
+    </vex-widget-quick-value-center>
+    <vex-widget-quick-value-center [change]="23" [icon]="icHelpOutline" [color]="theme.colors.orange" gdColumn.lt-sm="1"
+        label="Active" value="63"></vex-widget-quick-value-center>
+</div>
+<div class="p-gutter" gdColumns="1fr 1fr" gdColumns.lt-md="1fr" gdColumns.lt-sm="1fr" gdGap="16px" vexContainer>
+    <mat-card class="alert-card">
+        <h3>
+            This city is experiencing high demand from COVID-19
+        </h3>
+    </mat-card>
+    <vex-bar-chart>
+    </vex-bar-chart>
+</div>
+<div class="p-gutter">
+    <vex-analyze-table></vex-analyze-table>
+</div>
+<div class="p-gutter">
+    <vex-plot-chart></vex-plot-chart>
+</div>
+<div class="p-gutter" gdColumns="1fr 1fr" gdColumns.lt-md="1fr" gdColumns.lt-sm="1fr" gdGap="16px" vexContainer>
+    <vex-bar-chart>
+
+    </vex-bar-chart>
+    <vex-pie-chart>
+
+    </vex-pie-chart>
 </div>

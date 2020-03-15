@@ -1,0 +1,17 @@
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .right-button {
+    margin-left: auto;
+    margin-right: 28px;
+  }
+}
+.alert-card {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  height: 200px;
+}

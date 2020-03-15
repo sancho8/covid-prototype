@@ -7,6 +7,11 @@ import { AnalyzePageComponent } from './analyze/analyze-page/analyze-page.compon
 const childrenRoutes: Routes = [
   {
     path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
     component: DashboardComponent
   },
   {

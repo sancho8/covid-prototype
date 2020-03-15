@@ -1,0 +1,21 @@
+::ng-deep {
+  .leaflet-popup-content-wrapper {
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin: -5px;
+  }
+  .leaflet-popup-tip {
+    background: #333;
+  }
+  a.button {
+    display: block;
+    color: #eee;
+    border: 1px solid;
+    padding: 0px;
+    width: 100px;
+    margin: 10px auto;
+    border-radius: 4px;
+  }
+}
