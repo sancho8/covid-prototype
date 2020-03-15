@@ -26,7 +26,7 @@ export class PieChartComponent {
           colors: ['#fff']
         } as any
       },
-      labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+      labels: ['Clorox', 'Kleenex', 'Purell', 'Lysol', 'Downy'],
       responsive: [
         {
           breakpoint: 480,

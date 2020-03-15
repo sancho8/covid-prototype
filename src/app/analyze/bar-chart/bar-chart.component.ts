@@ -14,16 +14,8 @@ export class BarChartComponent {
     this.chartOptions = {
       series: [
         {
-          name: 'Reported Symptomatic',
+          name: 'Surge Rate',
           data: [44, 55, 41, 67, 22, 43]
-        },
-        {
-          name: 'Confirmed Cases',
-          data: [13, 23, 20, 8, 13, 27]
-        },
-        {
-          name: 'Discharged',
-          data: [11, 17, 15, 15, 21, 14]
         }
       ],
       chart: {
@@ -74,12 +66,11 @@ export class BarChartComponent {
           }
         },
         categories: [
-          '01/2011',
-          '02/2011',
-          '03/2011',
-          '04/2011',
-          '05/2011',
-          '06/2011'
+          'Clorox',
+          'Kleenex',
+          'Purell',
+          'Lysol',
+          'Downy'
         ]
       },
       legend: {

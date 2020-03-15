@@ -14,12 +14,24 @@ export class PlotChartComponent {
     this.chartOptions = {
       series: [
         {
-          name: 'series1',
+          name: 'Clorox',
           data: [31, 40, 28, 51, 42, 109, 100]
         },
         {
-          name: 'series2',
+          name: 'Kleenex',
           data: [11, 32, 45, 32, 34, 52, 41]
+        },
+        {
+          name: 'Purell',
+          data: [31, 43, 69, 19, 45, 100, 180]
+        },
+        {
+          name: 'Lysol',
+          data: [63, 32, 68, 79, 75, 50, 120]
+        },
+        {
+          name: 'Downy',
+          data: [11, 32, 45, 32, 34, 152, 130]
         }
       ],
       chart: {
@@ -35,13 +47,13 @@ export class PlotChartComponent {
       xaxis: {
         type: 'datetime',
         categories: [
-          '2018-09-19T00:00:00.000Z',
-          '2018-09-19T01:30:00.000Z',
-          '2018-09-19T02:30:00.000Z',
-          '2018-09-19T03:30:00.000Z',
-          '2018-09-19T04:30:00.000Z',
-          '2018-09-19T05:30:00.000Z',
-          '2018-09-19T06:30:00.000Z'
+          '2020-03-10T00:00:00.000Z',
+          '2020-03-11T01:30:00.000Z',
+          '2020-03-12T02:30:00.000Z',
+          '2020-03-13T03:30:00.000Z',
+          '2020-03-14T04:30:00.000Z',
+          '2020-03-15T05:30:00.000Z',
+          '2020-03-16T06:30:00.000Z'
         ],
         labels: {
           style: {
@@ -51,6 +63,8 @@ export class PlotChartComponent {
         },
       },
       yaxis: {
+        min: 0,
+        max: 200,
         labels: {
           style: {
             cssClass: 'text-secondary fill-current caption font-medium',

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class AnalyzeService {
   constructor() { }
 
-  getProducts() {
+  getProducts(): Product[] {
     return [{
       type: 'Brand',
       name: 'Clorox',
@@ -43,70 +43,70 @@ export class AnalyzeService {
       urgency: 'Medium'
     },
     {
-      type: 'Subcategories',
+      type: 'Subcategory',
       name: 'Toilet paper',
       rank: 1,
       surgeRate: 192,
       urgency: 'High'
     },
     {
-      type: 'Subcategories',
+      type: 'Subcategory',
       name: 'Disinfecant Spray',
       rank: 2,
       surgeRate: 188,
       urgency: 'High'
     },
     {
-      type: 'Subcategories',
+      type: 'Subcategory',
       name: 'Hand Soaps',
       rank: 3,
       surgeRate: 184,
       urgency: 'High'
     },
     {
-      type: 'Subcategories',
+      type: 'Subcategory',
       name: 'Flushable Wipes',
       rank: 4,
       surgeRate: 145,
       urgency: 'Medium'
     },
     {
-      type: 'Subcategories',
+      type: 'Subcategory',
       name: 'Facial Tissue',
       rank: 5,
       surgeRate: 130,
       urgency: 'Medium'
     },
     {
-      type: 'Categories',
+      type: 'Category',
       name: 'Bathroom Essentials',
       rank: 1,
       surgeRate: 192,
       urgency: 'High'
     },
     {
-      type: 'Categories',
+      type: 'Category',
       name: 'Cleaning Supplies',
       rank: 2,
       surgeRate: 188,
       urgency: 'HIgh'
     },
     {
-      type: 'Categories',
+      type: 'Category',
       name: 'Fruits',
       rank: 3,
       surgeRate: 184,
       urgency: 'High'
     },
     {
-      type: 'Categories',
+      type: 'Category',
       name: 'Beer & Wine',
       rank: 4,
       surgeRate: 145,
       urgency: 'Medium'
     },
     {
-      type: 'Categories',
+      type: 'Category',
       name: 'Toys & Games',
       rank: 5,
       surgeRate: 130,
@@ -117,8 +117,8 @@ export class AnalyzeService {
 
 export class Product {
   type: 'Brand' | 'Subcategory' | 'Category';
-  name: '';
+  name: string;
   rank: number;
   surgeRate: number;
-  urgency: number;
+  urgency: string;
 }
