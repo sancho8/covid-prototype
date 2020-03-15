@@ -14,7 +14,7 @@ export enum Style {
 })
 export class StyleService implements OnDestroy {
 
-  defaultStyle = Style.default;
+  defaultStyle = Style.dark;
 
   private _styleSubject = new BehaviorSubject<Style>(this.defaultStyle);
   style$ = this._styleSubject.asObservable();
@@ -27,7 +27,7 @@ export class StyleService implements OnDestroy {
     this._styleSubject.next(style);
   }
 
-  ngOnDestroy(): void {}
+  ngOnDestroy(): void { }
 
   private _updateStyle(style: Style) {
     const body = this.document.body;

@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VexModule } from '../@vex/vex.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomLayoutModule } from './custom-layout/custom-layout.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { AnalyzeModule } from './analyze/analyze.module';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,10 +18,15 @@ import { CustomLayoutModule } from './custom-layout/custom-layout.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    LeafletModule.forRoot(),
 
     // Vex
     VexModule,
-    CustomLayoutModule
+    CustomLayoutModule,
+
+    // App
+    DashboardModule,
+    AnalyzeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

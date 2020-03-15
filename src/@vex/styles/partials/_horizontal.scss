@@ -29,10 +29,6 @@
       &.sidenav-collapsed .sidenav-content {
         margin-left: var(--sidenav-collapsed-width) !important;
       }
-
-      &:not(.sidenav-collapsed) .sidenav-content {
-        margin-left: var(--sidenav-width) !important;
-      }
     }
   }
 

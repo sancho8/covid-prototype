@@ -1,5 +1,5 @@
 <div class="toolbar w-full px-gutter" fxLayout="row" fxLayoutAlign="start center" vexContainer>
-  <button (click)="openSidenav()" [fxHide]="!mobileQuery" mat-icon-button type="button">
+  <!--<button (click)="openSidenav()" [fxHide]="!mobileQuery" mat-icon-button type="button">
     <mat-icon [icIcon]="icMenu"></mat-icon>
   </button>
 
@@ -68,22 +68,19 @@
             type="button">MEGA MENU
       <ic-icon [icon]="icArrowDropDown" class="ltr:-mr-1 rtl:-ml-1" inline="true"></ic-icon>
     </button>
-  </div>
+  </div>-->
 
-
-  <div *ngIf="(isVerticalLayout$ | async) && isNavbarInToolbar$ | async"
-       [fxHide]="mobileQuery"
-       class="px-gutter"
-       fxFlex="none"
-       fxLayout="row"
-       fxLayoutAlign="start center">
+  <!--
+  <div *ngIf="(isVerticalLayout$ | async) && isNavbarInToolbar$ | async" [fxHide]="mobileQuery" class="px-gutter"
+    fxFlex="none" fxLayout="row" fxLayoutAlign="start center">
     <vex-navigation-item *ngFor="let item of navigationItems" [item]="item"></vex-navigation-item>
   </div>
+-->
 
   <span fxFlex></span>
 
   <div class="-mx-1 flex items-center">
-    <div class="px-1">
+    <!--<div class="px-1">
       <button (click)="openSearch()" mat-icon-button type="button">
         <mat-icon [icIcon]="icSearch"></mat-icon>
       </button>
@@ -103,7 +100,7 @@
       <button [matMenuTriggerFor]="languageMenu" mat-icon-button type="button">
         <mat-icon [icIcon]="emojioneUS"></mat-icon>
       </button>
-    </div>
+    </div>-->
 
     <div class="px-1">
       <vex-toolbar-user></vex-toolbar-user>
@@ -123,5 +120,5 @@
   </div>
 </div>
 
-<vex-navigation *ngIf="(isVerticalLayout$ | async) && isNavbarBelowToolbar$ | async"
-                [fxHide]="mobileQuery"></vex-navigation>
+<vex-navigation *ngIf="(isVerticalLayout$ | async) && isNavbarBelowToolbar$ | async" [fxHide]="mobileQuery">
+</vex-navigation>
