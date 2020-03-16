@@ -5,6 +5,284 @@ import { Injectable } from '@angular/core';
 })
 export class MapService {
 
+  covidData = [
+    {
+      State: 'Alabama',
+      Cases: 6,
+      Deaths: 0
+    },
+    {
+      State: 'Arizona',
+      Cases: 12,
+      Deaths: 0
+    },
+    {
+      State: 'Arkansas',
+      Cases: 12,
+      Deaths: 0
+    },
+    {
+      State: 'California',
+      Cases: 340,
+      Deaths: 5
+    },
+    {
+      State: 'Colorado',
+      Cases: 101,
+      Deaths: 1
+    },
+    {
+      State: 'Connecticut',
+      Cases: 22,
+      Deaths: 0
+    },
+    {
+      State: 'Delaware',
+      Cases: 6,
+      Deaths: 0
+    },
+    {
+      State: 'Diamond Princess',
+      Cases: 46,
+      Deaths: 0
+    },
+    {
+      State: 'District of Columbia',
+      Cases: 10,
+      Deaths: 0
+    },
+    {
+      State: 'Florida',
+      Cases: 76,
+      Deaths: 3
+    },
+    {
+      State: 'Georgia',
+      Cases: 66,
+      Deaths: 1
+    },
+    {
+      State: 'Grand Princess',
+      Cases: 21,
+      Deaths: 0
+    },
+    {
+      State: 'Hawaii',
+      Cases: 4,
+      Deaths: 0
+    },
+    {
+      State: 'Idaho',
+      Cases: 2,
+      Deaths: 0
+    },
+    {
+      State: 'Illinois',
+      Cases: 64,
+      Deaths: 0
+    },
+    {
+      State: 'Indiana',
+      Cases: 16,
+      Deaths: 0
+    },
+    {
+      State: 'Iowa',
+      Cases: 17,
+      Deaths: 0
+    },
+    {
+      State: 'Kansas',
+      Cases: 8,
+      Deaths: 1
+    },
+    {
+      State: 'Kentucky',
+      Cases: 14,
+      Deaths: 0
+    },
+    {
+      State: 'Louisiana',
+      Cases: 77,
+      Deaths: 1
+    },
+    {
+      State: 'Maine',
+      Cases: 3,
+      Deaths: 0
+    },
+    {
+      State: 'Maryland',
+      Cases: 26,
+      Deaths: 0
+    },
+    {
+      State: 'Massachusetts',
+      Cases: 138,
+      Deaths: 0
+    },
+    {
+      State: 'Michigan',
+      Cases: 25,
+      Deaths: 0
+    },
+    {
+      State: 'Minnesota',
+      Cases: 21,
+      Deaths: 0
+    },
+    {
+      State: 'Mississippi',
+      Cases: 6,
+      Deaths: 0
+    },
+    {
+      State: 'Missouri',
+      Cases: 4,
+      Deaths: 0
+    },
+    {
+      State: 'Montana',
+      Cases: 5,
+      Deaths: 0
+    },
+    {
+      State: 'Nebraska',
+      Cases: 14,
+      Deaths: 0
+    },
+    {
+      State: 'Nevada',
+      Cases: 21,
+      Deaths: 0
+    },
+    {
+      State: 'New Hampshire',
+      Cases: 7,
+      Deaths: 0
+    },
+    {
+      State: 'New Jersey',
+      Cases: 69,
+      Deaths: 1
+    },
+    {
+      State: 'New Mexico',
+      Cases: 10,
+      Deaths: 0
+    },
+    {
+      State: 'New York',
+      Cases: 525,
+      Deaths: 2
+    },
+    {
+      State: 'North Carolina',
+      Cases: 24,
+      Deaths: 0
+    },
+    {
+      State: 'North Dakota',
+      Cases: 1,
+      Deaths: 0
+    },
+    {
+      State: 'Ohio',
+      Cases: 26,
+      Deaths: 0
+    },
+    {
+      State: 'Oklahoma',
+      Cases: 4,
+      Deaths: 0
+    },
+    {
+      State: 'Oregon',
+      Cases: 32,
+      Deaths: 0
+    },
+    {
+      State: 'Pennsylvania',
+      Cases: 47,
+      Deaths: 0
+    },
+    {
+      State: 'Puerto Rico',
+      Cases: 3,
+      Deaths: 0
+    },
+    {
+      State: 'Rhode Island',
+      Cases: 20,
+      Deaths: 0
+    },
+    {
+      State: 'South Carolina',
+      Cases: 19,
+      Deaths: 0
+    },
+    {
+      State: 'South Dakota',
+      Cases: 9,
+      Deaths: 1
+    },
+    {
+      State: 'Tennessee',
+      Cases: 32,
+      Deaths: 0
+    },
+    {
+      State: 'Texas',
+      Cases: 57,
+      Deaths: 0
+    },
+    {
+      State: 'Utah',
+      Cases: 10,
+      Deaths: 0
+    },
+    {
+      State: 'Vermont',
+      Cases: 5,
+      Deaths: 0
+    },
+    {
+      State: 'Virgin Islands, U.S.',
+      Cases: 1,
+      Deaths: 0
+    },
+    {
+      State: 'Virginia',
+      Cases: 41,
+      Deaths: 1
+    },
+    {
+      State: 'Washington',
+      Cases: 572,
+      Deaths: 37
+    },
+    {
+      State: 'West Virginia',
+      Cases: 0,
+      Deaths: 0
+    },
+    {
+      State: 'Wisconsin',
+      Cases: 27,
+      Deaths: 0
+    },
+    {
+      State: 'Wyoming',
+      Cases: 2,
+      Deaths: 0
+    },
+    {
+      State: 'Alaska',
+      Cases: 0,
+      Deaths: 0
+    }
+  ];
+
   constructor() { }
 
   getStatesData() {
@@ -14,7 +292,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '01',
-          properties: { name: 'Alabama', density: 94.65 },
+          properties: { name: 'Alabama', cases: 94.65 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -59,7 +337,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '02',
-          properties: { name: 'Alaska', density: 1.264 },
+          properties: { name: 'Alaska', cases: 1.264 },
           geometry: {
             type: 'MultiPolygon',
             coordinates: [
@@ -1299,7 +1577,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '04',
-          properties: { name: 'Arizona', density: 57.05 },
+          properties: { name: 'Arizona', cases: 57.05 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1343,7 +1621,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '05',
-          properties: { name: 'Arkansas', density: 56.43 },
+          properties: { name: 'Arkansas', cases: 56.43 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1392,7 +1670,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '06',
-          properties: { name: 'California', density: 241.7 },
+          properties: { name: 'California', cases: 241.7 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1497,7 +1775,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '08',
-          properties: { name: 'Colorado', density: 49.33 },
+          properties: { name: 'Colorado', cases: 49.33 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1525,7 +1803,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '09',
-          properties: { name: 'Connecticut', density: 739.1 },
+          properties: { name: 'Connecticut', cases: 739.1 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1553,7 +1831,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '10',
-          properties: { name: 'Delaware', density: 464.3 },
+          properties: { name: 'Delaware', cases: 464.3 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1578,7 +1856,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '11',
-          properties: { name: 'District of Columbia', density: 10065 },
+          properties: { name: 'District of Columbia', cases: 10065 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1595,7 +1873,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '12',
-          properties: { name: 'Florida', density: 353.4 },
+          properties: { name: 'Florida', cases: 353.4 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1685,7 +1963,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '13',
-          properties: { name: 'Georgia', density: 169.5 },
+          properties: { name: 'Georgia', cases: 169.5 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1748,7 +2026,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '15',
-          properties: { name: 'Hawaii', density: 214.1 },
+          properties: { name: 'Hawaii', cases: 214.1 },
           geometry: {
             type: 'MultiPolygon',
             coordinates: [
@@ -1827,7 +2105,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '16',
-          properties: { name: 'Idaho', density: 19.15 },
+          properties: { name: 'Idaho', cases: 19.15 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1905,7 +2183,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '17',
-          properties: { name: 'Illinois', density: 231.5 },
+          properties: { name: 'Illinois', cases: 231.5 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -1984,7 +2262,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '18',
-          properties: { name: 'Indiana', density: 181.7 },
+          properties: { name: 'Indiana', cases: 181.7 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2042,7 +2320,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '19',
-          properties: { name: 'Iowa', density: 54.81 },
+          properties: { name: 'Iowa', cases: 54.81 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2104,7 +2382,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '20',
-          properties: { name: 'Kansas', density: 35.09 },
+          properties: { name: 'Kansas', cases: 35.09 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2129,7 +2407,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '21',
-          properties: { name: 'Kentucky', density: 110 },
+          properties: { name: 'Kentucky', cases: 110 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2216,7 +2494,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '22',
-          properties: { name: 'Louisiana', density: 105 },
+          properties: { name: 'Louisiana', cases: 105 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2304,7 +2582,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '23',
-          properties: { name: 'Maine', density: 43.04 },
+          properties: { name: 'Maine', cases: 43.04 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2382,7 +2660,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '24',
-          properties: { name: 'Maryland', density: 596.3 },
+          properties: { name: 'Maryland', cases: 596.3 },
           geometry: {
             type: 'MultiPolygon',
             coordinates: [
@@ -2464,7 +2742,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '25',
-          properties: { name: 'Massachusetts', density: 840.2 },
+          properties: { name: 'Massachusetts', cases: 840.2 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2511,7 +2789,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '26',
-          properties: { name: 'Michigan', density: 173.9 },
+          properties: { name: 'Michigan', cases: 173.9 },
           geometry: {
             type: 'MultiPolygon',
             coordinates: [
@@ -2689,7 +2967,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '27',
-          properties: { name: 'Minnesota', density: 67.14 },
+          properties: { name: 'Minnesota', cases: 67.14 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2784,7 +3062,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '28',
-          properties: { name: 'Mississippi', density: 63.5 },
+          properties: { name: 'Mississippi', cases: 63.5 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2842,7 +3120,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '29',
-          properties: { name: 'Missouri', density: 87.26 },
+          properties: { name: 'Missouri', cases: 87.26 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2907,7 +3185,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '30',
-          properties: { name: 'Montana', density: 6.858 },
+          properties: { name: 'Montana', cases: 6.858 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -2971,7 +3249,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '31',
-          properties: { name: 'Nebraska', density: 23.97 },
+          properties: { name: 'Nebraska', cases: 23.97 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3012,7 +3290,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '32',
-          properties: { name: 'Nevada', density: 24.8 },
+          properties: { name: 'Nevada', cases: 24.8 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3045,7 +3323,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '33',
-          properties: { name: 'New Hampshire', density: 147 },
+          properties: { name: 'New Hampshire', cases: 147 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3085,7 +3363,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '34',
-          properties: { name: 'New Jersey', density: 1189 },
+          properties: { name: 'New Jersey', cases: 1189 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3129,7 +3407,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '35',
-          properties: { name: 'New Mexico', density: 17.16 },
+          properties: { name: 'New Mexico', cases: 17.16 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3158,7 +3436,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '36',
-          properties: { name: 'New York', density: 412.3 },
+          properties: { name: 'New York', cases: 412.3 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3238,7 +3516,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '37',
-          properties: { name: 'North Carolina', density: 198.2 },
+          properties: { name: 'North Carolina', cases: 198.2 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3311,7 +3589,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '38',
-          properties: { name: 'North Dakota', density: 9.916 },
+          properties: { name: 'North Dakota', cases: 9.916 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3339,7 +3617,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '39',
-          properties: { name: 'Ohio', density: 281.9 },
+          properties: { name: 'Ohio', cases: 281.9 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3398,7 +3676,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '40',
-          properties: { name: 'Oklahoma', density: 55.22 },
+          properties: { name: 'Oklahoma', cases: 55.22 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3455,7 +3733,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '41',
-          properties: { name: 'Oregon', density: 40.33 },
+          properties: { name: 'Oregon', cases: 40.33 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3523,7 +3801,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '42',
-          properties: { name: 'Pennsylvania', density: 284.3 },
+          properties: { name: 'Pennsylvania', cases: 284.3 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3568,7 +3846,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '44',
-          properties: { name: 'Rhode Island', density: 1006 },
+          properties: { name: 'Rhode Island', cases: 1006 },
           geometry: {
             type: 'MultiPolygon',
             coordinates: [
@@ -3601,7 +3879,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '45',
-          properties: { name: 'South Carolina', density: 155.4 },
+          properties: { name: 'South Carolina', cases: 155.4 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3657,7 +3935,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '46',
-          properties: { name: 'South Dakota', density: 98.07 },
+          properties: { name: 'South Dakota', cases: 98.07 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3698,7 +3976,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '47',
-          properties: { name: 'Tennessee', density: 88.08 },
+          properties: { name: 'Tennessee', cases: 88.08 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3753,7 +4031,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '48',
-          properties: { name: 'Texas', density: 98.07 },
+          properties: { name: 'Texas', cases: 98.07 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3917,7 +4195,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '49',
-          properties: { name: 'Utah', density: 34.3 },
+          properties: { name: 'Utah', cases: 34.3 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3941,7 +4219,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '50',
-          properties: { name: 'Vermont', density: 67.73 },
+          properties: { name: 'Vermont', cases: 67.73 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -3981,7 +4259,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '51',
-          properties: { name: 'Virginia', density: 204.5 },
+          properties: { name: 'Virginia', cases: 204.5 },
           geometry: {
             type: 'MultiPolygon',
             coordinates: [
@@ -4083,7 +4361,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '53',
-          properties: { name: 'Washington', density: 102.6 },
+          properties: { name: 'Washington', cases: 102.6 },
           geometry: {
             type: 'MultiPolygon',
             coordinates: [
@@ -4177,7 +4455,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '54',
-          properties: { name: 'West Virginia', density: 77.06 },
+          properties: { name: 'West Virginia', cases: 77.06 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -4254,7 +4532,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '55',
-          properties: { name: 'Wisconsin', density: 105.2 },
+          properties: { name: 'Wisconsin', cases: 105.2 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -4341,7 +4619,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '56',
-          properties: { name: 'Wyoming', density: 5.851 },
+          properties: { name: 'Wyoming', cases: 5.851 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -4366,7 +4644,7 @@ export class MapService {
         {
           type: 'Feature',
           id: '72',
-          properties: { name: 'Puerto Rico', density: 1082 },
+          properties: { name: 'Puerto Rico', cases: 1082 },
           geometry: {
             type: 'Polygon',
             coordinates: [
@@ -4392,7 +4670,11 @@ export class MapService {
             ]
           }
         }
-      ]
+      ].map(x => {
+        const stateData = this.covidData.find(c => c.State === x.properties.name);
+        x.properties.cases = stateData.Cases;
+        return x;
+      })
     };
 
   }

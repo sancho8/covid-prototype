@@ -11,7 +11,7 @@ import { AnalyzeTableComponent } from './analyze-table/analyze-table.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { PageLayoutModule } from 'src/@vex/components/page-layout/page-layout.module';
 import { PlotChartComponent } from './plot-chart/plot-chart.component';
-import { StackedBarChartComponent } from './stacked-bar-chart/stacked-bar-chart.component';
+import { StackedBarChartComponent } from '../../../stacked-bar-chart/stacked-bar-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 
 

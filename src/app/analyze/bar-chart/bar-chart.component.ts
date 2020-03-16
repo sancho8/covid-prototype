@@ -15,13 +15,13 @@ export class BarChartComponent {
       series: [
         {
           name: 'Surge Rate',
-          data: [44, 55, 41, 67, 22, 43]
+          data: [44, 55, 41, 67, 22]
         }
       ],
       chart: {
         type: 'bar',
         height: 350,
-        stacked: true,
+        stacked: false,
         toolbar: {
           show: true
         },

@@ -48,7 +48,6 @@ export class DashboardComponent implements OnInit {
     this.map = map;
     this.map.setView([37.8, -96], 4);
     L.geoJSON(this.mapService.getStatesData() as any, { style: this.style }).addTo(this.map);
-    map.addControl(L.control.zoom({ position: 'bottomright' }));
   }
 
   style(feature) {
@@ -63,7 +62,7 @@ export class DashboardComponent implements OnInit {
                     '#FFEDA0';
     };
     return {
-      fillColor: getColor(feature.properties.density),
+      fillColor: getColor(feature.properties.cases),
       weight: 2,
       opacity: 1,
       color: 'white',
