@@ -55,4 +55,8 @@ export class AnalyzeTableComponent implements OnInit, AfterViewInit {
     return this.columns.filter(column => column.visible).map(column => column.property);
   }
 
+  trackByProperty<T>(index: number, column: TableColumn<T>) {
+    return column.property;
+  }
+
 }
